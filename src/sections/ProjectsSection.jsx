@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import './Sections.css';
 
 const projects = [
@@ -25,18 +26,31 @@ const projects = [
         description: 'AI Copywriting tool for marketing teams.',
         tags: ['AI', 'Productivity'],
         link: '#'
+    },
+    {
+        title: 'VoiceNotes AI',
+        description: 'Voice-to-text with AI summarization.',
+        tags: ['AI', 'Speech', 'Productivity'],
+        link: '#'
     }
 ];
 
-export function ProjectsSection() {
+export function ProjectsSection({ variant = 'default' }) {
+    let containerClass = "projects-grid";
+    if (variant === 'home-grid') {
+        containerClass = "projects-home-grid";
+    } else if (variant === 'horizontal') {
+        containerClass = "projects-horizontal";
+    }
+
     return (
         <section className="section projects-section" id="projects">
             <div className="section-header">
                 <h2 className="section-title">My Projects</h2>
-                <a href="#" className="section-more">View All ↗</a>
+                <Link to="/projects" className="section-more">View All ↗</Link>
             </div>
 
-            <div className="projects-grid">
+            <div className={containerClass}>
                 {projects.map((project, index) => (
                     <a href={project.link} key={index} className="project-card">
                         <div className="card-image-placeholder"></div>
@@ -51,6 +65,14 @@ export function ProjectsSection() {
                         </div>
                     </a>
                 ))}
+
+                {variant === 'home-grid' && (
+                    <Link to="/projects" className="project-card project-more-card">
+                        <div className="card-more-content">
+                            <span>And More... ↗</span>
+                        </div>
+                    </Link>
+                )}
             </div>
         </section>
     );

@@ -1,5 +1,6 @@
 
-import { Github, Linkedin, Moon, Sun, User, Rocket } from 'lucide-react';
+import { Github, Linkedin, Moon, Sun, User, Rocket, Mail } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 export function Sidebar({ theme, toggleTheme }) {
@@ -18,21 +19,30 @@ export function Sidebar({ theme, toggleTheme }) {
             <nav className="nav-links">
                 <ul className="nav-list">
                     <li>
-                        <a href="#about" className="nav-item">
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                        >
                             <User size={20} />
                             <span>About Me</span>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="#projects" className="nav-item">
+                        <NavLink
+                            to="/projects"
+                            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                        >
                             <Rocket size={20} />
-                            <span>Portfolio</span>
-                        </a>
+                            <span>Projects</span>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
 
             <div className="social-links">
+                <a href="mailto:user@gmail.com" className="social-icon">
+                    <Mail size={20} />
+                </a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <Github size={20} />
                 </a>

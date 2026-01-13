@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import './Sections.css';
 
 export function HeroSection() {
@@ -6,7 +7,7 @@ export function HeroSection() {
         <section className="section hero-section" id="about">
             <div className="section-header">
                 <h2 className="section-title">About Me</h2>
-                <a href="#" className="section-more">Read More ↗</a>
+                <Link to="/about" className="section-more">Read More ↗</Link>
             </div>
 
             <div className="hero-content">

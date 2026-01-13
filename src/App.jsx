@@ -1,9 +1,10 @@
 
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
-import { MainContent } from './components/MainContent';
-import { HeroSection } from './sections/HeroSection';
-import { ProjectsSection } from './sections/ProjectsSection';
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
+import { ProjectsPage } from './pages/ProjectsPage';
 import './App.css';
 
 function App() {
@@ -20,13 +21,16 @@ function App() {
   return (
     <div className="app-container">
       <Sidebar theme={theme} toggleTheme={toggleTheme} />
-      <MainContent>
-        <HeroSection />
-        <ProjectsSection />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+        </Routes>
         <div className="footer-copyright">
           © 2026 | User Portfolio
         </div>
-      </MainContent>
+      </main>
     </div>
   );
 }

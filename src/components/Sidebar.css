@@ -81,7 +81,8 @@
     transition: color 0.2s ease;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item.active {
     color: var(--text-primary);
 }
 
@@ -90,7 +91,8 @@
     transition: color 0.2s ease;
 }
 
-.nav-item:hover svg {
+.nav-item:hover svg,
+.nav-item.active svg {
     color: var(--accent-color);
 }
 
