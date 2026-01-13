@@ -1,0 +1,171 @@
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    background-color: var(--bg-primary);
+    /* Or maybe slightly different */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; Removed to allow grouping */
+    border-right: 1px solid var(--border-color);
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.role {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-style: italic;
+}
+
+.quote-line {
+    width: 4px;
+    height: 20px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Navigation Styles */
+.nav-links {
+    margin-top: 40px;
+    /* margin-bottom: auto; Removed so social links sit directly below */
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: var(--text-primary);
+}
+
+.nav-item svg {
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover svg {
+    color: var(--accent-color);
+}
+
+
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+.theme-toggle {
+    margin-top: auto;
+    /* Pushes this and subsequent elements to the bottom */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.theme-toggle:hover {
+    color: var(--text-primary);
+}
+
+.built-with {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.built-badge {
+    background-color: var(--bg-secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 24px;
+    }
+
+    .nav-links {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
