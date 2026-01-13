@@ -122,14 +122,14 @@
 }
 
 .theme-toggle {
-    margin-top: auto;
-    /* Pushes this and subsequent elements to the bottom */
+    margin-top: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
     color: var(--text-secondary);
     display: flex;
-    padding: 10px;
+    padding: 0;
+    /* Remove padding if icon only or adjust */
     margin-bottom: 20px;
 }
 

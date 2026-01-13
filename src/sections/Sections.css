@@ -39,6 +39,61 @@
     color: var(--accent-color);
 }
 
+/* About Page Styles */
+.about-header {
+    margin-bottom: 40px;
+    margin-top: 60px;
+    /* "Move Below More Space" - space between breadcrumb and header */
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    /* Bigger font as requested */
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.breadcrumb-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+    color: var(--text-primary);
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+    /* Highlight current page */
+}
+
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+.intro-text {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+
 /* Hero Section specific */
 .hero-content {
     color: var(--text-secondary);

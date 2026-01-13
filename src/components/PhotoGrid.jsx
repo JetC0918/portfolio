@@ -8,9 +8,7 @@ export function PhotoGrid() {
         <div className="photo-grid">
             {photos.map((_, index) => (
                 <div key={index} className="photo-item">
-                    <div className="photo-placeholder">
-                        <span className="photo-icon">↗</span>
-                    </div>
+                    <div className="photo-placeholder"></div>
                 </div>
             ))}
         </div>
