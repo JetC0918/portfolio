@@ -79,6 +79,17 @@
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.page-title::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin-right: 12px;
 }
 
 .page-subtitle {
@@ -89,12 +100,22 @@
 
 .intro-text {
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     margin-bottom: 24px;
+}
+
+.about-content {
+    padding-left: 32px;
+    /* Indent bio block from the left */
 }
 
 
 /* Hero Section specific */
+.hero-section {
+    margin-top: 60px;
+    /* Match About/Projects page spacing from breadcrumb to title */
+}
+
 .hero-content {
     color: var(--text-secondary);
     line-height: 1.8;

@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Moon, Sun, User, Rocket, Mail } from 'lucide-react';
+import { Github, Linkedin, Moon, Sun, User, Rocket, Mail, House } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
@@ -18,6 +18,16 @@ export function Sidebar({ theme, toggleTheme }) {
 
             <nav className="nav-links">
                 <ul className="nav-list">
+                    <li>
+                        <NavLink
+                            to="/"
+                            end
+                            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                        >
+                            <House size={20} />
+                            <span>Homepage</span>
+                        </NavLink>
+                    </li>
                     <li>
                         <NavLink
                             to="/about"

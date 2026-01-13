@@ -43,6 +43,8 @@ export function ProjectsSection({ variant = 'default' }) {
         containerClass = "projects-horizontal";
     }
 
+    const displayProjects = variant === 'home-grid' ? projects.slice(0, 3) : projects;
+
     return (
         <section className="section projects-section" id="projects">
             <div className="section-header">
@@ -51,7 +53,7 @@ export function ProjectsSection({ variant = 'default' }) {
             </div>
 
             <div className={containerClass}>
-                {projects.map((project, index) => (
+                {displayProjects.map((project, index) => (
                     <a href={project.link} key={index} className="project-card">
                         <div className="card-image-placeholder"></div>
                         <div className="card-content">

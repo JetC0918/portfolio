@@ -28,7 +28,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
         <div className="footer-copyright">
-          © 2026 | User Portfolio
+          © 2026 | Jet
         </div>
       </main>
     </div>

@@ -27,13 +27,13 @@ export function AboutPage() {
                             <p className="intro-text">
                                 — Welcome to my personal homepage.
                             </p>
-                            <p>
+                            <p className="intro-text">
                                 I am a passionate Full Stack Developer. In 2015, I graduated with a degree in Computer Science. Since then, influenced by the power of software, I taught myself coding and entered the IT industry, using the alias "One in a Million" to this day.
                             </p>
-                            <p>
+                            <p className="intro-text">
                                 In 2018, I joined a major tech company as a backend engineer. During my five years there, I focused on payment system development and architecture design, growing from a self-taught programmer to a professional engineer.
                             </p>
-                            <p>
+                            <p className="intro-text">
                                 In 2023, I decided to become an independent developer, going all-in on AI applications and global markets.
                             </p>
                         </div>
