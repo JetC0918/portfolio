@@ -7,7 +7,7 @@ export function Sidebar({ theme, toggleTheme }) {
     return (
         <aside className="sidebar">
             <div className="profile-section">
-                <div className="avatar-placeholder"></div>
+                <img src="https://via.placeholder.com/100/333/f59e0b?text=JWJ" alt="Profile" className="avatar" />
                 <h1 className="name">Nyee Wen Jet</h1>
                 <p className="role">Independent AI Builder</p>
                 <div className="quote">
@@ -50,13 +50,13 @@ export function Sidebar({ theme, toggleTheme }) {
             </nav>
 
             <div className="social-links">
-                <a href="mailto:user@gmail.com" className="social-icon">
+                <a href="mailto:nyeewenjet@gmail.com" className="social-icon">
                     <Mail size={20} />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://github.com/JetC0918" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <Github size={20} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.linkedin.com/in/wen-jet-nyee/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <Linkedin size={20} />
                 </a>
             </div>

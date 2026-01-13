@@ -186,7 +186,8 @@
     overflow: hidden;
     text-decoration: none;
     transition: transform 0.2s, background-color 0.2s;
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     /* Ensure full height in grid */
 }
@@ -231,8 +232,23 @@
     /* Pattern overlay could go here */
 }
 
+.card-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
 .card-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 16px;
 }
 
 .card-title {

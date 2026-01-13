@@ -25,16 +25,19 @@ export function AboutPage() {
                     <div className="about-content">
                         <div className="bio-block">
                             <p className="intro-text">
-                                — Welcome to my personal homepage.
+                                — Welcome to my personal page.
                             </p>
                             <p className="intro-text">
-                                I am a passionate Full Stack Developer. In 2015, I graduated with a degree in Computer Science. Since then, influenced by the power of software, I taught myself coding and entered the IT industry, using the alias "One in a Million" to this day.
+                                I am a passionate AI Builder. In 2020, I graduated with a Master of Engineering Science from University Tunku Abdul Rahman (UTAR) .
                             </p>
                             <p className="intro-text">
-                                In 2018, I joined a major tech company as a backend engineer. During my five years there, I focused on payment system development and architecture design, growing from a self-taught programmer to a professional engineer.
+                                During my academic years (2017–2020), I worked as a Research Assistant, immersing myself in deep learning and computer vision. I developed automated segmentation frameworks for medical imaging and published two peer-reviewed papers, laying the foundation for my career in AI.
                             </p>
                             <p className="intro-text">
-                                In 2023, I decided to become an independent developer, going all-in on AI applications and global markets.
+                                In 2021, I joined Vertiv as a Content Specialist. In this role, I expanded my technical vision by driving data-driven SEO strategies and collaborating on global UX implementations, gaining valuable experience in product adaptability and digital content lifecycles.
+                            </p>
+                            <p className="intro-text">
+                                In 2025, I pivoted back to my technical roots to become an AI Engineer. I joined the Gamuda AI Academy to master full-stack AI development (GenAI, LLM, RAG), and I am currently all in on deploying innovative AI solutions.
                             </p>
                         </div>
 

@@ -1,38 +1,30 @@
 
 import { Link } from 'react-router-dom';
 import './Sections.css';
+import { TextAlignStartIcon } from 'lucide-react';
 
 const projects = [
     {
-        title: 'ShipAny',
-        description: 'AI SaaS Boilerplate for shipping your startup in days.',
-        tags: ['AI', 'Boilerplate', 'Next.js'],
-        link: '#'
+        title: 'Codio Live',
+        description: 'Run real-time collaborative coding sessions in your browser with AI Assistant.',
+        tags: ['AI', 'Collaboration'],
+        link: 'https://mock-interview-hub.onrender.com/',
+        image: '/Codiolive.png'
     },
     {
-        title: 'MCP.so',
-        description: 'Find Awesome MCP Servers and Clients.',
-        tags: ['MCP', 'Marketplace', 'Agent'],
-        link: '#'
+        title: 'Cozy Cat',
+        description: 'Meet your AI pet that respond to your commands.',
+        tags: ['AI', 'Interactive'],
+        link: 'https://cozycat.lovable.app',
+        image: '/Cozycat.png'
     },
     {
-        title: 'ThinkAny',
-        description: 'High-performance AI Search Engine.',
-        tags: ['AI', 'Search Engine', 'RAG'],
-        link: '#'
+        title: 'Cat Court',
+        description: 'A mini game where a Cat Judge will judge your comments.',
+        tags: ['AI', 'Game'],
+        link: 'https://catcourt.lovable.app',
+        image: '/Catcourt.png'
     },
-    {
-        title: 'CopyWriter',
-        description: 'AI Copywriting tool for marketing teams.',
-        tags: ['AI', 'Productivity'],
-        link: '#'
-    },
-    {
-        title: 'VoiceNotes AI',
-        description: 'Voice-to-text with AI summarization.',
-        tags: ['AI', 'Speech', 'Productivity'],
-        link: '#'
-    }
 ];
 
 export function ProjectsSection({ variant = 'default' }) {
@@ -55,14 +47,16 @@ export function ProjectsSection({ variant = 'default' }) {
             <div className={containerClass}>
                 {displayProjects.map((project, index) => (
                     <a href={project.link} key={index} className="project-card">
-                        <div className="card-image-placeholder"></div>
+                        <img src={project.image} alt={project.title} className="card-image" />
                         <div className="card-content">
                             <h3 className="card-title">{project.title}</h3>
                             <p className="card-description">{project.description}</p>
-                            <div className="card-tags">
-                                {project.tags.map(tag => (
-                                    <span key={tag} className="tag">{tag}</span>
-                                ))}
+                            <div className="card-footer">
+                                <div className="card-tags">
+                                    {project.tags.map(tag => (
+                                        <span key={tag} className="tag">{tag}</span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </a>

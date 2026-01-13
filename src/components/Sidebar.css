@@ -19,12 +19,15 @@
     gap: 16px;
 }
 
-.avatar-placeholder {
+.avatar-placeholder,
+.avatar {
     width: 100px;
     height: 100px;
     background-color: #333;
     border-radius: 12px;
     margin-bottom: 20px;
+    object-fit: cover;
+    display: block;
 }
 
 .name {

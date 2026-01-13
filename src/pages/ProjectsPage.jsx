@@ -1,66 +1,52 @@
-import { Home, Rocket } from 'lucide-react';
+import { Home, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import '../sections/Sections.css';
 import './ProjectsPage.css'; // New CSS file for page specific styles if needed
 
 const projects = [
     {
-        title: 'ShipAny',
-        description: 'AI SaaS Boilerplate for shipping your startup in days.',
-        tags: ['AI', 'Boilerplate', 'Next.js'],
-        link: '#'
+        title: 'Codio Live',
+        description: 'Run real-time collaborative coding sessions in your browser with AI Assistant.',
+        tags: ['Tool'],
+        displayTags: ['AI', 'Collaboration'],
+        link: 'https://mock-interview-hub.onrender.com/',
+        image: '/Codiolive.png'
     },
     {
-        title: 'MCP.so',
-        description: 'Find Awesome MCP Servers and Clients.',
-        tags: ['MCP', 'Marketplace', 'Agent'],
-        link: '#'
+        title: 'Cozy Cat',
+        description: 'Meet your AI pet that respond to your commands.',
+        tags: ['Game'],
+        displayTags: ['AI', 'Interactive'],
+        link: 'https://cozycat.lovable.app',
+        image: '/Cozycat.png'
     },
     {
-        title: 'ThinkAny',
-        description: 'High-performance AI Search Engine.',
-        tags: ['AI', 'Search Engine', 'RAG'],
-        link: '#'
+        title: 'Cat Court',
+        description: 'A mini game where a Cat Judge will judge your comments.',
+        tags: ['Game'],
+        displayTags: ['AI', 'Game'],
+        link: 'https://catcourt.lovable.app',
+        image: '/Catcourt.png'
     },
     {
-        title: 'CopyWeb',
-        description: 'AI Web Design to Code in Seconds.',
-        tags: ['AI', 'Web Design', 'Agent'],
-        link: '#'
-    },
-    {
-        title: 'PodLM',
-        description: 'Turn Any Content Into AI Podcast.',
-        tags: ['AI', 'Podcast', 'Generator'],
-        link: '#'
-    },
-    {
-        title: 'Nano Banana 2',
-        description: 'Nano Banana Image Generator.',
-        tags: ['AI', 'Nano Banana', 'Generator'],
-        link: '#'
-    },
-    {
-        title: 'HeyBeauty',
-        description: 'AI Virtual Try On.',
-        tags: ['AI', 'Virtual Try On'],
-        link: '#'
-    },
-    {
-        title: 'Melodisco',
-        description: 'AI Music Player.',
-        tags: ['AI', 'Music Player'],
-        link: '#'
-    },
-    {
-        title: 'AI Cover',
-        description: 'AI Cover Generator.',
-        tags: ['AI', 'Cover', 'Generator'],
-        link: '#'
+        title: 'Hot Feed',
+        description: 'A reddit trend aggregator.',
+        tags: ['Tool'],
+        displayTags: ['Reddit', 'Aggregator'],
+        link: 'https://hot-feed.lovable.app/',
+        image: '/Hotfeed.png'
     }
 ];
 
 export function ProjectsPage() {
+    const [activeFilter, setActiveFilter] = useState('All');
+
+    // Filter projects based on active filter
+    const filteredProjects = activeFilter === 'All'
+        ? projects
+        : projects.filter(project => project.tags.includes(activeFilter));
+
     return (
         <div className="page-content projects-page">
             <div className="breadcrumb">
@@ -78,26 +64,49 @@ export function ProjectsPage() {
                 </div>
 
                 <div className="filter-row">
-                    <button className="filter-btn active">All</button>
-                    <button className="filter-btn">AI Tools</button>
-                    <button className="filter-btn">AI Pets</button>
-                    <button className="filter-btn">AI Games</button>
+                    <button
+                        className={`filter-btn ${activeFilter === 'All' ? 'active' : ''}`}
+                        onClick={() => setActiveFilter('All')}
+                    >
+                        All
+                    </button>
+                    <button
+                        className={`filter-btn ${activeFilter === 'Tool' ? 'active' : ''}`}
+                        onClick={() => setActiveFilter('Tool')}
+                    >
+                        Tool
+                    </button>
+                    <button
+                        className={`filter-btn ${activeFilter === 'Game' ? 'active' : ''}`}
+                        onClick={() => setActiveFilter('Game')}
+                    >
+                        Game
+                    </button>
                 </div>
 
                 <div className="projects-grid-2col">
-                    {projects.map((project, index) => (
-                        <a href={project.link} key={index} className="project-card">
-                            <div className="card-image-placeholder"></div>
+                    {filteredProjects.map((project, index) => (
+                        <a
+                            href={project.link}
+                            key={index}
+                            className="project-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={project.image} alt={project.title} className="card-image" />
                             <div className="card-content">
                                 <h3 className="card-title">{project.title}</h3>
                                 <p className="card-description">{project.description}</p>
                                 <div className="card-tags">
-                                    {project.tags.map(tag => (
+                                    {project.displayTags.map(tag => (
                                         <span key={tag} className="tag">{tag}</span>
                                     ))}
                                 </div>
-                                <div className="card-footer" style={{ marginTop: '16px' }}>
-                                    <span className="website-badge">Website</span>
+                                <div className="card-footer">
+                                    <span className="website-badge">
+                                        <Globe size={14} />
+                                        <span>Website</span>
+                                    </span>
                                 </div>
                             </div>
                         </a>

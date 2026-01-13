@@ -12,13 +12,13 @@ export function HeroSection() {
 
             <div className="hero-content">
                 <p>
-                    I am a passionate Full Stack Developer and AI Enthusiast. I graduated with a degree in Computer Science and have since fallen in love with building software that matters.
+                    I am Nyee Wen Jet, a 2020 Master of Engineering Science graduate from UTAR. During my studies, I specialized in deep learning and computer vision, publishing two papers and laying the foundation for my AI career.
                 </p>
                 <p>
-                    In 2026, I started my journey as an independent developer, focusing on building AI-native applications and exploring the potential of Agents and Large Language Models.
+                    In 2021, I joined Vertiv as a Content Specialist. In this role, I leveraged data-driven strategies to optimize global user experiences, broadening my technical horizons beyond academia.
                 </p>
                 <p>
-                    I love sharing my knowledge and contributing to the open-source community.
+                    In 2025, I transitioned to AI Engineering. After mastering full-stack AI development at Gamuda AI Academy, I am currently all in on building and deploying innovative AI applications.
                 </p>
             </div>
         </section>
