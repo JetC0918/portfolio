@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Moon, Sun, User, Rocket, Mail, House } from 'lucide-react';
+import { Github, Linkedin, Moon, Sun, User, Rocket, House } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
@@ -7,7 +7,7 @@ export function Sidebar({ theme, toggleTheme }) {
     return (
         <aside className="sidebar">
             <div className="profile-section">
-                <img src="https://via.placeholder.com/100/333/f59e0b?text=JWJ" alt="Profile" className="avatar" />
+                <img src="/avatar.webp" alt="Nyee Wen Jet" className="avatar" />
                 <h1 className="name">Nyee Wen Jet</h1>
                 <p className="role">Independent AI Builder</p>
                 <div className="quote">
@@ -50,9 +50,6 @@ export function Sidebar({ theme, toggleTheme }) {
             </nav>
 
             <div className="social-links">
-                <a href="mailto:nyeewenjet@gmail.com" className="social-icon" title="Email Me">
-                    <Mail size={20} />
-                </a>
                 <a href="https://github.com/JetC0918" target="_blank" title="Github" rel="noopener noreferrer" className="social-icon">
                     <Github size={20} />
                 </a>

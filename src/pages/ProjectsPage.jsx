@@ -1,43 +1,9 @@
 import { Home, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { projects } from '../data/projects';
 import '../sections/Sections.css';
-import './ProjectsPage.css'; // New CSS file for page specific styles if needed
-
-const projects = [
-    {
-        title: 'Codio Live',
-        description: 'Run real-time collaborative coding sessions in your browser with AI Assistant.',
-        tags: ['Tool'],
-        displayTags: ['AI', 'Collaboration'],
-        link: 'https://mock-interview-hub.onrender.com/',
-        image: '/Codiolive.png'
-    },
-    {
-        title: 'Cozy Cat',
-        description: 'Meet your AI pet that respond to your commands.',
-        tags: ['Game'],
-        displayTags: ['AI', 'Interactive'],
-        link: 'https://cozycat.lovable.app',
-        image: '/Cozycat.png'
-    },
-    {
-        title: 'Cat Court',
-        description: 'A mini game where a Cat Judge will judge your comments.',
-        tags: ['Game'],
-        displayTags: ['AI', 'Game'],
-        link: 'https://catcourt.lovable.app',
-        image: '/Catcourt.png'
-    },
-    {
-        title: 'Hot Feed',
-        description: 'A reddit trend aggregator.',
-        tags: ['Tool'],
-        displayTags: ['Reddit', 'Aggregator'],
-        link: 'https://hot-feed.lovable.app/',
-        image: '/Hotfeed.png'
-    }
-];
+import './ProjectsPage.css';
 
 export function ProjectsPage() {
     const [activeFilter, setActiveFilter] = useState('All');

@@ -1,31 +1,7 @@
 
 import { Link } from 'react-router-dom';
+import { projects } from '../data/projects';
 import './Sections.css';
-import { TextAlignStartIcon } from 'lucide-react';
-
-const projects = [
-    {
-        title: 'Codio Live',
-        description: 'Run real-time collaborative coding sessions in your browser with AI Assistant.',
-        tags: ['AI', 'Collaboration'],
-        link: 'https://mock-interview-hub.onrender.com/',
-        image: '/Codiolive.png'
-    },
-    {
-        title: 'Cozy Cat',
-        description: 'Meet your AI pet that respond to your commands.',
-        tags: ['AI', 'Interactive'],
-        link: 'https://cozycat.lovable.app',
-        image: '/Cozycat.png'
-    },
-    {
-        title: 'Cat Court',
-        description: 'A mini game where a Cat Judge will judge your comments.',
-        tags: ['AI', 'Game'],
-        link: 'https://catcourt.lovable.app',
-        image: '/Catcourt.png'
-    },
-];
 
 export function ProjectsSection({ variant = 'default' }) {
     let containerClass = "projects-grid";
@@ -53,7 +29,7 @@ export function ProjectsSection({ variant = 'default' }) {
                             <p className="card-description">{project.description}</p>
                             <div className="card-footer">
                                 <div className="card-tags">
-                                    {project.tags.map(tag => (
+                                    {(project.displayTags || project.tags).map(tag => (
                                         <span key={tag} className="tag">{tag}</span>
                                     ))}
                                 </div>

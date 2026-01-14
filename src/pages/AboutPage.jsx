@@ -1,7 +1,6 @@
 
 import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { PhotoGrid } from '../components/PhotoGrid';
 import '../sections/Sections.css';
 
 export function AboutPage() {

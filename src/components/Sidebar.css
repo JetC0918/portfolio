@@ -21,10 +21,10 @@
 
 .avatar-placeholder,
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 250px;
     background-color: #333;
-    border-radius: 12px;
+    border-radius: 0;
     margin-bottom: 20px;
     object-fit: cover;
     display: block;
