@@ -1,4 +1,6 @@
 // Shared project data - single source of truth
+const base = import.meta.env.BASE_URL;
+
 export const projects = [
     {
         title: 'Codio Live',
@@ -6,7 +8,7 @@ export const projects = [
         tags: ['Tool'],
         displayTags: ['AI', 'Collaboration'],
         link: 'https://mock-interview-hub.onrender.com/',
-        image: 'Codiolive.webp'
+        image: `${base}Codiolive.webp`
     },
     {
         title: 'Cozy Cat',
@@ -14,7 +16,7 @@ export const projects = [
         tags: ['Game'],
         displayTags: ['AI', 'Interactive'],
         link: 'https://cozycat.lovable.app',
-        image: 'Cozycat.webp'
+        image: `${base}Cozycat.webp`
     },
     {
         title: 'Cat Court',
@@ -22,7 +24,7 @@ export const projects = [
         tags: ['Game'],
         displayTags: ['AI', 'Game'],
         link: 'https://catcourt.lovable.app',
-        image: 'Catcourt.webp'
+        image: `${base}Catcourt.webp`
     },
     {
         title: 'Hot Feed',
@@ -30,6 +32,6 @@ export const projects = [
         tags: ['Tool'],
         displayTags: ['Reddit', 'Aggregator'],
         link: 'https://hot-feed.lovable.app/',
-        image: 'Hotfeed.webp'
+        image: `${base}Hotfeed.webp`
     }
 ];
