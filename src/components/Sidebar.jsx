@@ -7,7 +7,7 @@ export function Sidebar({ theme, toggleTheme }) {
     return (
         <aside className="sidebar">
             <div className="profile-section">
-                <img src="/avatar.webp" alt="Nyee Wen Jet" className="avatar" />
+                <img src="avatar.webp" alt="Nyee Wen Jet" className="avatar" />
                 <h1 className="name">Nyee Wen Jet</h1>
                 <p className="role">Independent AI Builder</p>
                 <div className="quote">

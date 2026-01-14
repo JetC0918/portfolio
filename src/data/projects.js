@@ -6,7 +6,7 @@ export const projects = [
         tags: ['Tool'],
         displayTags: ['AI', 'Collaboration'],
         link: 'https://mock-interview-hub.onrender.com/',
-        image: '/Codiolive.webp'
+        image: 'Codiolive.webp'
     },
     {
         title: 'Cozy Cat',
@@ -14,7 +14,7 @@ export const projects = [
         tags: ['Game'],
         displayTags: ['AI', 'Interactive'],
         link: 'https://cozycat.lovable.app',
-        image: '/Cozycat.webp'
+        image: 'Cozycat.webp'
     },
     {
         title: 'Cat Court',
@@ -22,7 +22,7 @@ export const projects = [
         tags: ['Game'],
         displayTags: ['AI', 'Game'],
         link: 'https://catcourt.lovable.app',
-        image: '/Catcourt.webp'
+        image: 'Catcourt.webp'
     },
     {
         title: 'Hot Feed',
@@ -30,6 +30,6 @@ export const projects = [
         tags: ['Tool'],
         displayTags: ['Reddit', 'Aggregator'],
         link: 'https://hot-feed.lovable.app/',
-        image: '/Hotfeed.webp'
+        image: 'Hotfeed.webp'
     }
 ];
