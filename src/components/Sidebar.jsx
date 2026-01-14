@@ -12,7 +12,7 @@ export function Sidebar({ theme, toggleTheme }) {
                 <p className="role">Independent AI Builder</p>
                 <div className="quote">
                     <span className="quote-line"></span>
-                    <p>One in a million.</p>
+                    <p>Connecting code, creativity, and people.</p>
                 </div>
             </div>
 
@@ -50,13 +50,13 @@ export function Sidebar({ theme, toggleTheme }) {
             </nav>
 
             <div className="social-links">
-                <a href="mailto:nyeewenjet@gmail.com" className="social-icon">
+                <a href="mailto:nyeewenjet@gmail.com" className="social-icon" title="Email Me">
                     <Mail size={20} />
                 </a>
-                <a href="https://github.com/JetC0918" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://github.com/JetC0918" target="_blank" title="Github" rel="noopener noreferrer" className="social-icon">
                     <Github size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/wen-jet-nyee/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.linkedin.com/in/wen-jet-nyee/" target="_blank" title="Linkedin" rel="noopener noreferrer" className="social-icon">
                     <Linkedin size={20} />
                 </a>
             </div>

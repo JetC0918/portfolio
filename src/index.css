@@ -2,20 +2,26 @@
   /* Dark Theme (Default) */
   --bg-primary: #121212;
   --bg-secondary: #1e1e1e;
+  --bg-card-hover: #2a2a2a;
   --text-primary: #f5f5f5;
   --text-secondary: #a0a0a0;
   --accent-color: #ffd700; /* Gold-ish from image */
   --border-color: #333;
+  --tag-bg: rgba(255, 255, 255, 0.1);
+  --tag-text: var(--text-secondary);
   --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 [data-theme='light'] {
   --bg-primary: #ffffff;
   --bg-secondary: #f0f0f0;
+  --bg-card-hover: #e8e8e8;
   --text-primary: #333333;
   --text-secondary: #666666;
   --accent-color: #e6c200;
   --border-color: #ddd;
+  --tag-bg: rgba(0, 0, 0, 0.05);
+  --tag-text: var(--text-secondary);
 }
 
 * {

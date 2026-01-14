@@ -194,7 +194,7 @@
 
 .project-card:hover {
     transform: translateY(-4px);
-    background-color: #2a2a2a;
+    background-color: var(--bg-card-hover);
 }
 
 /* More Card Styling */
@@ -202,7 +202,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--tag-bg);
     /* Lighter/Transparent background */
     border: 1px dashed var(--border-color);
     min-height: 200px;
@@ -265,6 +265,7 @@
     margin-bottom: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -277,8 +278,8 @@
 
 .tag {
     font-size: 10px;
-    color: var(--text-secondary);
-    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--tag-text);
+    background-color: var(--tag-bg);
     padding: 4px 8px;
     border-radius: 4px;
     text-transform: uppercase;

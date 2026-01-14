@@ -19,7 +19,7 @@ export function AboutPage() {
                 <section className="section">
                     <div className="about-header">
                         <h1 className="page-title">About Me</h1>
-                        <p className="page-subtitle">One in a million.</p>
+                        <p className="page-subtitle">Connecting code, creativity, and people.</p>
                     </div>
 
                     <div className="about-content">
@@ -39,10 +39,6 @@ export function AboutPage() {
                             <p className="intro-text">
                                 In 2025, I pivoted back to my technical roots to become an AI Engineer. I joined the Gamuda AI Academy to master full-stack AI development (GenAI, LLM, RAG), and I am currently all in on deploying innovative AI solutions.
                             </p>
-                        </div>
-
-                        <div className="photo-grid-card">
-                            <PhotoGrid />
                         </div>
                     </div>
                 </section>
